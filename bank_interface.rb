@@ -5,10 +5,18 @@
 
 require_relative 'exceptions'
 
-class BankInterface
-  attr_reader :cookies
+module StockExchangeRobot
+  class BankInterface
+    attr_reader :cookies
 
-  def connect; raise NoMethodError; end
-  def index_quotes; raise NoMethodError; end
-  def show_quote(isin); raise NoMethodError; end
+    def connect
+      raise UnimplementedBankInterfaceException, "Unimplemented method connect for interface #{self.class}."
+    end
+    def index_quotes
+      raise UnimplementedBankInterfaceException, "Unimplemented method index_quotes for interface #{self.class}."
+    end
+    def show_quote(isin)
+      raise UnimplementedBankInterfaceException, "Unimplemented method show_quotes(isin) for interface #{self.class}."
+    end
+  end
 end
