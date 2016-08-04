@@ -2,6 +2,8 @@
 
 require 'active_record'
 
-class Transaction < ActiveRecord::Base
-  has_one :portfolio
+module StockExchangeRobot
+  class Transaction < ActiveRecord::Base
+    has_one :portfolio
+  end
 end

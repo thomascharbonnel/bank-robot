@@ -2,5 +2,7 @@
 
 require 'active_record'
 
-class Quote < ActiveRecord::Base
+module StockExchangeRobot
+  class Quote < ActiveRecord::Base
+  end
 end

@@ -2,7 +2,9 @@
 
 require 'active_record'
 
-class Portfolio < ActiveRecord::Base
-  has_many :transactions
-  has_many :tracked_values
+module StockExchangeRobot
+  class Portfolio < ActiveRecord::Base
+    has_many :transactions
+    has_many :tracked_values
+  end
 end

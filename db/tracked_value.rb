@@ -2,6 +2,8 @@
 
 require 'active_record'
 
-class TrackedValue < ActiveRecord::Base
-  has_one :portfolio
+module StockExchangeRobot
+  class TrackedValue < ActiveRecord::Base
+    has_one :portfolio
+  end
 end
