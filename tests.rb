@@ -13,8 +13,8 @@ describe StockExchangeRobot::BankInterface do
   describe "when calling abstract methods from BankInterface" do
     it "should raise an UnimplementedBankInterfaceException exception" do
       # All three methods must raise the exception.
-      assert_raises(StockExchangeRobot::BankInterface::UnimplementedBankInterfaceException) { @bi.index_quotes }
-      assert_raises(StockExchangeRobot::BankInterface::UnimplementedBankInterfaceException) { @bi.show_quote(nil) }
+      assert_raises(StockExchangeRobot::BankInterface::UnimplementedBankInterfaceException) { @bi.index_symbols }
+      assert_raises(StockExchangeRobot::BankInterface::UnimplementedBankInterfaceException) { @bi.get_quotes(nil) }
     end
   end
 end
